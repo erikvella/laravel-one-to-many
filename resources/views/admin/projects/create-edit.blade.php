@@ -33,6 +33,26 @@
                     <p class="text-danger">{{ $message }}</p>
                 @enderror
 
+
+                {{-- select per la tipologia di progetto --}}
+                <div class="my-5">
+                    <label for="type_id" class="form-label">Tipo di progetto</label>
+                    <select name="type_id" id="type_id" class="form-select" aria-label="Default select example">
+                        <option value="" selected>Seleziona una tipologia</option>
+                        @foreach ($types as $type)
+                            <option value="{{ $type->id }}"
+                                {{ old('type_id', $project?->type_id) == $type->id ? 'selected' : '' }}>
+                                {{ $type->name }}</option>
+                        @endforeach
+
+                    </select>
+                </div>
+
+
+
+
+
+
                 <div class="mb-3">
                     <label for="image" class="form-label">Immagine</label>
                     <input type="file" class="form-control" id="image" name="image" onchange="showImage(event)"

@@ -6,6 +6,11 @@
                 href="{{ route('admin.projects.edit', $project) }}">Modifica
                 progetto</a></h1>
 
+        @if ($project->type)
+            <p>Tipologia : <strong>{{ $project->type->name }}</strong></p>
+        @endif
+
+
         <div>
             <img class="show-img" src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
             <p> {{ $project->image_original_name }}</p>

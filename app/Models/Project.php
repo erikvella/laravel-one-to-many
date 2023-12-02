@@ -18,7 +18,7 @@ class Project extends Model
     }
 
     protected $fillable = [
-        'title' , 'slug' , 'text' , 'date' , 'image' , 'image_original_name'
+        'title' , 'type_id' , 'slug' , 'text' , 'date' , 'image' , 'image_original_name'
     ];
 
 }

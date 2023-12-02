@@ -17,7 +17,7 @@
                 <a href="{{ route('admin.types.index') }}">Tipi di progetto</a>
             </li>
             <li class="my-5">
-                <a href="#">Elenco progetti suddivisi per tipologia</a>
+                <a href="{{ route('admin.type-project') }}">Elenco progetti suddivisi per tipologia</a>
             </li>
         </ul>
     </nav>
