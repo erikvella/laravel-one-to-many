@@ -10,6 +10,13 @@ class Project extends Model
 {
     use HasFactory;
 
+    public function type(){
+// relazione con la tabella types
+// la funzione deve essere al singolare perchè il progetto ha una sola tipologia
+// a questa funzione accederò come una proprietà della classe Project
+        return $this->belongsTo(Type::class);
+    }
+
     protected $fillable = [
         'title' , 'slug' , 'text' , 'date' , 'image' , 'image_original_name'
     ];

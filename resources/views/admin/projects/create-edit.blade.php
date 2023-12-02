@@ -45,6 +45,8 @@
                 {{-- @if ($project)
                     <img width="120" src="{{ asset('storage/' . $project->image) }}">
                 @endif --}}
+
+                {{-- in caso di errore di caricamento dell'immagine carico il placeholder --}}
                 <img id="thumb" width="120" onerror="this.src='/img/placeholder-png.png'"
                     src="{{ asset('storage/' . $project?->image) }}">
                 <div class="form-floating my-5">

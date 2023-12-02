@@ -13,6 +13,7 @@
                     <th scope="col">Id</th>
                     <th scope="col">Nome progetto</th>
                     <th scope="col">Descrizione progetto</th>
+                    <th scope="col">Tipologia progetto</th>
                     <th scope="col">Data rilascio del progetto</th>
                     <th scope="col">Azioni</th>
                 </tr>
@@ -24,6 +25,7 @@
                         <td>{{ $project->id }}</td>
                         <td>{{ $project->title }}</td>
                         <td>{{ $project->text }}</td>
+                        <td>{{ $project->type?->name ?? '-' }}</td>
                         <td>{{ $project->date }}</td>
                         <td class="d-flex">
                             <a class="btn btn-success mx-3" href="{{ route('admin.projects.show', $project) }}">Dettagli
